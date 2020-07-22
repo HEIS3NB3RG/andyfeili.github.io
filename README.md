@@ -5,10 +5,14 @@ layout: page
 ---
 
 
+Level1/2 Help Desk at Cloudconnect. 
 
-Welcome to my Webiste!
-I am known as ErrorCauser. I own a Team called [Bad-Byte](https://discord.gg/RgBGcvz).
-![EC-Logo](https://cdn.discordapp.com/attachments/723180241140318278/732260421469208666/unknown.png)
+Interested in security, automation, scripting
 
+Bsc Computer Science, CompTIA A+, Network+
 
+<img src="https://tryhackme-badges.s3.amazonaws.com/thinknote.png" alt="TryHackMe">
 
+### Contact me
+
+[fei.andy.li@gmail.com](mailto:fei.andy.li@gmail.com)
