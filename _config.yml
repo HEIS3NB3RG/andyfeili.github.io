@@ -1,5 +1,5 @@
-title: "ErrorCauser's Write-Up's"
-author: "ErrorCauser"
+title: "CTF Notes"
+author: "Andy Li"
 #description: ""
 permalink: /:title/
 lang: "en"
@@ -27,10 +27,10 @@ navigation:
   - {file: "README.md", icon: address-card}
 
 external:                    # see http://fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:errorcauser@protonmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/ErrorCauser"}
-  - {title: Subscribe, icon: rss, url: "https://www.youtube.com/channel/UCFnQ31gKtmZscrHCIi_ePcg"}
-  - {title: Discord, icon: discord, url: "https://discord.gg/TE7afPN"}
+  - {title: Mail, icon: envelope, url: "mailto:fei.andy.li@gmail.com"}
+  - {title: Github, icon: github, url: "https://github.com/andyfeili"}
+  #- {title: Subscribe, icon: rss, url: ""}
+  #- {title: Discord, icon: discord, url: ""}
 comments:
   disqus_shortname: "errorcauser-github-io"      # see https://disqus.com/
 #  isso_domain: ""           # see https://posativ.org/isso/
