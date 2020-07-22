@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Level1/2 Help Desk at CloudConnect
 
-### More Information
+Interested in security, automation, scripting, pen testing
 
-A place to include any other types of information that you'd like to include about yourself.
+Bsc in Computer Science, A+, Network+
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[fei.andy.li@gmail.com](mailto:fei.andy.li@gmail.com)
