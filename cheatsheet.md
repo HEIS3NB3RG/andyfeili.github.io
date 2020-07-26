@@ -99,11 +99,17 @@ hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.212.195 -t 4 ssh
 
 hydra -l sam -P /usr/share/wordlists/rockyou.txt 10.10.120.174 -t 4 -s 4567 ssh (ssh port 4567)
 
+fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v ./christmaslists.zip (zip password)
+
 hashcat -m 1800 hash /usr/share/wordlists/rockyou.txt --force (crack hash)
 
 hashcat -m 0 hash /usr/share/wordlists/rockyou.txt --force (crack hash md5)
 
-fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v ./christmaslists.zip (zip password)
+| hashid        | hashcat |
+|---------------|---------|
+| SHA-512 Crypt | 1800    |
+|               |         |
+|               |         |
 
 ## Encryption
 
