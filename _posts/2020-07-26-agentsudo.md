@@ -244,3 +244,60 @@ answer
 ```
 hackerrules!
 ```
+
+## Task 4
+
+### What is the user flag?
+
+```
+kali@kali:~/Downloads$ ssh james@10.10.165.113
+james@10.10.165.113's password: 
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-55-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Jul 27 06:53:46 UTC 2020
+
+  System load:  0.0               Processes:           93
+  Usage of /:   39.7% of 9.78GB   Users logged in:     0
+  Memory usage: 38%               IP address for eth0: 10.10.165.113
+  Swap usage:   0%
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+75 packages can be updated.
+33 updates are security updates.
+
+
+Last login: Tue Oct 29 14:26:27 2019
+james@agent-sudo:~$ ls
+Alien_autospy.jpg  user_flag.txt
+james@agent-sudo:~$ cat user_flag.txt
+b03d975e8c92a7c04146cfa7a5a313c7
+```
+answer
+
+```
+b03d975e8c92a7c04146cfa7a5a313c7
+```
+
+### What is the incident of the photo called?
+
+download the jpg 
+
+```
+scp james@10.10.165.113:Alien_autospy.jpg /home/kali/Downloads
+```
+
+reverse img google search with "fox news"
+
+answer
+
+```
+Roswell alien autopsy
+```
