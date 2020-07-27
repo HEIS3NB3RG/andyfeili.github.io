@@ -142,3 +142,105 @@ cute-alien.jpg
 cutie.png
 To_agentJ.txt
 ```
+the question metions a zip file password but we don't have a zip file here, lets check if there is a zip file hidden in one of the images
+
+```
+kali@kali:~/Downloads$ binwalk cutie.png
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 528 x 528, 8-bit colormap, non-interlaced
+869           0x365           Zlib compressed data, best compression
+34562         0x8702          Zip archive data, encrypted compressed size: 98, uncompressed size: 86, name: To_agentR.txt
+34820         0x8804          End of Zip archive, footer length: 22
+
+kali@kali:~/Downloads$ binwalk cutie.png -e
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 528 x 528, 8-bit colormap, non-interlaced
+869           0x365           Zlib compressed data, best compression
+34562         0x8702          Zip archive data, encrypted compressed size: 98, uncompressed size: 86, name: To_agentR.txt
+34820         0x8804          End of Zip archive, footer length: 22
+
+kali@kali:~/Downloads$ ls
+```
+
+we find a zip file and extract it from the image
+
+crack the password using john
+
+```
+kali@kali:~/Downloads/_cutie.png.extracted$ /usr/sbin/zip2john 8702.zip > output
+ver 81.9 8702.zip/To_agentR.txt is not encrypted, or stored with non-handled compression type
+kali@kali:~/Downloads/_cutie.png.extracted$ ls
+365  365.zlib  8702.zip  output  To_agentR.txt
+kali@kali:~/Downloads/_cutie.png.extracted$ sudo john output
+Using default input encoding: UTF-8
+Loaded 1 password hash (ZIP, WinZip [PBKDF2-SHA1 256/256 AVX2 8x])
+Will run 2 OpenMP threads
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Warning: Only 10 candidates buffered for the current salt, minimum 16 needed for performance.
+Proceeding with wordlist:/usr/share/john/password.lst, rules:Wordlist
+alien            (8702.zip/To_agentR.txt)
+1g 0:00:01:43 DONE 2/3 (2020-07-27 02:44) 0.009676g/s 425.6p/s 425.6c/s 425.6C/s 123456..Peter
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+```
+
+answer 
+
+```
+alien
+```
+
+### steg password
+
+unzip the file to get the password
+
+```
+QXJlYTUx
+```
+
+this password doesn't work, but it looks like base64, lets decode it
+
+answer
+
+```
+Area51
+```
+
+
+### Who is the other agent (in full name)?
+
+now extract the message with steghide
+```
+kali@kali:~/Downloads$ steghide extract -sf cute-alien.jpg 
+Enter passphrase: 
+wrote extracted data to "message.txt".
+kali@kali:~/Downloads$ ls
+cute-alien.jpg  cute-alien.jpg.out  cutie.png  _cutie.png.extracted  message.txt  pass.txt  To_agentJ.txt
+kali@kali:~/Downloads$ cat message.txt
+Hi james,
+
+Glad you find this message. Your login password is hackerrules!
+
+Don't ask me why the password look cheesy, ask agent R who set this password for you.
+
+Your buddy,
+chris
+```
+
+answer
+```
+james
+```
+
+### SSH password
+
+answer 
+```
+hackerrules!
+```
