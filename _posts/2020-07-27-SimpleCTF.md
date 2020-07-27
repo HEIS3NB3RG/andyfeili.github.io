@@ -66,6 +66,7 @@ ssh
 
 ### What's the CVE you're using against the application?
 
+
 ```
 
 ```
@@ -73,6 +74,52 @@ ssh
 ### To what kind of vulnerability is the application vulnerable?
 
 ### What's the password?
+
+found /simple
+
+```
+---------------------Running Recon Commands----------------------
+                                                                                                                                                                                       
+
+Starting gobuster scan
+                                                                                                                                                                                       
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.83.63:80
+[+] Threads:        30
+[+] Wordlist:       /usr/share/wordlists/dirb/common.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Show length:    true
+[+] Extensions:     php,html
+[+] Expanded:       true
+[+] Timeout:        10s
+===============================================================
+2020/07/27 04:33:51 Starting gobuster
+===============================================================
+http://10.10.83.63:80/.hta (Status: 403) [Size: 290]
+http://10.10.83.63:80/.hta.html (Status: 403) [Size: 295]
+http://10.10.83.63:80/.hta.php (Status: 403) [Size: 294]
+http://10.10.83.63:80/.htaccess (Status: 403) [Size: 295]
+http://10.10.83.63:80/.htaccess.html (Status: 403) [Size: 300]
+http://10.10.83.63:80/.htaccess.php (Status: 403) [Size: 299]
+http://10.10.83.63:80/.htpasswd (Status: 403) [Size: 295]
+http://10.10.83.63:80/.htpasswd.html (Status: 403) [Size: 300]
+http://10.10.83.63:80/.htpasswd.php (Status: 403) [Size: 299]
+http://10.10.83.63:80/index.html (Status: 200) [Size: 11321]
+http://10.10.83.63:80/index.html (Status: 200) [Size: 11321]
+http://10.10.83.63:80/robots.txt (Status: 200) [Size: 929]
+http://10.10.83.63:80/server-status (Status: 403) [Size: 299]
+http://10.10.83.63:80/simple (Status: 301) [Size: 311]
+===============================================================
+2020/07/27 04:40:06 Finished
+===============================================================
+
+```
+
+run sqlmap, does not appear to be injectable
 
 ### Where can you login with the details obtained?
 
