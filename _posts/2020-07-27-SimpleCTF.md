@@ -68,10 +68,14 @@ ssh
 
 
 ```
-
+CVE-2019-9053
 ```
 
 ### To what kind of vulnerability is the application vulnerable?
+
+```
+sqli
+```
 
 ### What's the password?
 
@@ -216,9 +220,23 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 09:19:
 
 ### Where can you login with the details obtained?
 
+```
+ssh
+```
+
 ### What's the user flag?
 
+```
+G00d j0b, keep up!
+```
+
 ### Is there any other user in the home directory? What's its name?
+
+cat /etc/passwd
+
+```
+sunbath
+```
 
 ### What can you leverage to spawn a privileged shell?
 
@@ -229,3 +247,7 @@ root@Machine:~#
 ```
 
 ### What's the root flag?
+
+```
+W3ll d0n3. You made it!
+```
