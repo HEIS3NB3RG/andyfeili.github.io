@@ -149,6 +149,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 05:13:
 1 of 1 target successfully completed, 1 valid password found
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2020-07-27 05:13:38
 ```
+file manager > upload php reverse shell
 
 ### Where can you login with the details obtained?
 
