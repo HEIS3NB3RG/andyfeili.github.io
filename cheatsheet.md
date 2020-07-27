@@ -117,6 +117,13 @@ steghide extract -sf ./TryHackMe.jpg (stenography)
 
 /home/kali/.local/bin/stegcracker cute-alien.jpg /usr/share/wordlists/rockyou.txt
 
+crack zip password
+
+```
+/usr/sbin/zip2john 8702.zip > output
+sudo john output
+```
+
 binwalk cutie.png
 
 binwalk cutie.png -e (extract hidden files)
