@@ -115,6 +115,8 @@ pg -d note1.txt.gpg (decrypt gpg)
 
 steghide extract -sf ./TryHackMe.jpg (stenography)
 
+/home/kali/.local/bin/stegcracker cute-alien.jpg /usr/share/wordlists/rockyou.txt
+
 binwalk cutie.png
 
 binwalk cutie.png -e (extract hidden files)
