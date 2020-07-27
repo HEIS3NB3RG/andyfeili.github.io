@@ -26,8 +26,6 @@ cat /etc/passwd (get list of users)
 
 sudo cat /etc/shadow (hash of password)
 
-find / 2>> /dev/null | grep "shadow.bak" (check if there is a back up of shadow file)
-
 find / -type f -perm -o+w 2>/dev/null (find files with write permissions)
 
 ## msfconsole
@@ -116,6 +114,10 @@ hashcat -m 0 hash /usr/share/wordlists/rockyou.txt --force (crack hash md5)
 pg -d note1.txt.gpg (decrypt gpg)
 
 steghide extract -sf ./TryHackMe.jpg (stenography)
+
+binwalk cutie.png
+
+binwalk cutie.png -e (extract hidden files)
 
 openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out file.txt (asymmetric decryption using private key) 
 
