@@ -28,3 +28,68 @@ answer
 
 ### How you redirect yourself to a secret page?
 
+we get this message after nagivating to the web page
+
+```
+Dear agents,
+
+Use your own codename as user-agent to access the site.
+
+From,
+Agent R 
+```
+
+user-agent is an option we can set using curl
+
+```
+kali@kali:~$ curl -A "R" -L 10.10.206.40
+What are you doing! Are you one of the 25 employees? If not, I going to report this incident
+<!DocType html>
+<html>
+<head>
+        <title>Annoucement</title>
+</head>
+
+<body>
+<p>
+        Dear agents,
+        <br><br>
+        Use your own <b>codename</b> as user-agent to access the site.
+        <br><br>
+        From,<br>
+        Agent R
+</p>
+</body>
+</html>
+```
+
+answer
+```
+user-agent
+```
+
+### What is the agent name?
+
+we get this message when we set -A to "C"
+
+```
+kali@kali:~$ curl -A "C" -L 10.10.206.40
+Attention chris, <br><br>
+
+Do you still remember our deal? Please tell agent J about the stuff ASAP. Also, change your god damn password, is weak! <br><br>
+
+From,<br>
+Agent R 
+```
+
+answer
+```
+chris
+```
+
+## Task 3
+
+### FTP password
+
+lets crack chris' FTP password using hydra
+
