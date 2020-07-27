@@ -115,3 +115,30 @@ crystal
 ```
 
 ### Zip file password
+
+login to ftp with the creds above to download the files
+
+there was an issue using ftp
+```
+kali@kali:~/Downloads/agents$ ftp 10.10.165.113 
+Connected to 10.10.165.113.
+220 (vsFTPd 3.0.3)
+Name (10.10.165.113:kali): chris
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+500 Illegal PORT command.
+ftp: bind: Address already in use
+ftp> 
+```
+
+i used filezilla to download the files instead
+
+```
+cute-alien.jpg
+cutie.png
+To_agentJ.txt
+```
