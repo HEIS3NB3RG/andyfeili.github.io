@@ -139,5 +139,38 @@ Matching Defaults entries for www-data on ip-10-10-240-102.eu-west-1.compute.int
 User www-data may run the following commands on ip-10-10-240-102.eu-west-1.compute.internal:
     (ALL) NOPASSWD: ALL
     ```
+```
+/etc/shadow:root:*:17849:0:99999:7:::
+/etc/shadow:daemon:*:17849:0:99999:7:::
+/etc/shadow:bin:*:17849:0:99999:7:::
+/etc/shadow:sys:*:17849:0:99999:7:::
+/etc/shadow:sync:*:17849:0:99999:7:::
+/etc/shadow:games:*:17849:0:99999:7:::
+/etc/shadow:man:*:17849:0:99999:7:::
+/etc/shadow:lp:*:17849:0:99999:7:::
+/etc/shadow:mail:*:17849:0:99999:7:::
+/etc/shadow:news:*:17849:0:99999:7:::
+/etc/shadow:uucp:*:17849:0:99999:7:::
+/etc/shadow:proxy:*:17849:0:99999:7:::
+/etc/shadow:www-data:*:17849:0:99999:7:::
+/etc/shadow:backup:*:17849:0:99999:7:::
+/etc/shadow:list:*:17849:0:99999:7:::
+/etc/shadow:irc:*:17849:0:99999:7:::
+/etc/shadow:gnats:*:17849:0:99999:7:::
+/etc/shadow:nobody:*:17849:0:99999:7:::
+/etc/shadow:systemd-timesync:*:17849:0:99999:7:::
+/etc/shadow:systemd-network:*:17849:0:99999:7:::
+/etc/shadow:systemd-resolve:*:17849:0:99999:7:::
+/etc/shadow:systemd-bus-proxy:*:17849:0:99999:7:::
+/etc/shadow:syslog:*:17849:0:99999:7:::
+/etc/shadow:_apt:*:17849:0:99999:7:::
+/etc/shadow:lxd:*:17849:0:99999:7:::
+/etc/shadow:messagebus:*:17849:0:99999:7:::
+/etc/shadow:uuidd:*:17849:0:99999:7:::
+/etc/shadow:dnsmasq:*:17849:0:99999:7:::
+/etc/shadow:sshd:*:17849:0:99999:7:::
+/etc/shadow:pollinate:*:17849:0:99999:7:::
+/etc/shadow:ubuntu:!:17937:0:99999:7:::
+```
 
 ## priv esc
