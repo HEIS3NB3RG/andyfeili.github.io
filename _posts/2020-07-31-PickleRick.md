@@ -110,5 +110,8 @@ read the passwd file using the same method
 /etc/passwd:pollinate:x:111:1::/var/cache/pollinate:/bin/false
 /etc/passwd:ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
 ```
-
+view page source of /portal.php
+```
+<!-- Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0== -->
+```
 ## priv esc
