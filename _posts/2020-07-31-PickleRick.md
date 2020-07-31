@@ -138,7 +138,7 @@ Matching Defaults entries for www-data on ip-10-10-240-102.eu-west-1.compute.int
 
 User www-data may run the following commands on ip-10-10-240-102.eu-west-1.compute.internal:
     (ALL) NOPASSWD: ALL
-    ```
+```
 ```
 /etc/shadow:root:*:17849:0:99999:7:::
 /etc/shadow:daemon:*:17849:0:99999:7:::
