@@ -120,4 +120,16 @@ decode this many times with base64, got the text
 rabbit hole
 ```
 
+found the rsa key 
+
+```
+find / -name *rsa*
+
+/etc/ssh/ssh_host_rsa_key
+/etc/ssh/ssh_host_rsa_key.pub
+
+/etc/ssh/ssh_host_rsa_key.pub:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdP02ZxAzTiLT5mt+Tm02eJA12GXNRdBWYmSrJp5HttYx8Jr2oSr5xXCQDAUkYKd1wUAaxVgAIOqMBgy9aiY7G+EmNKPA7dxg45WubLlTGefZ7XJHLAjW6r2sGdQvuPRPnw/7ZshgtKXdfR3chCo6XJu6ZFvxLLrlixLDjy5iTn8oQ79BPe4M5vBkHMUCAUPMdctAPbIOzzeiBVVYv2LQtO2h82gYUB4Fwt8tMn6ZCTlSKDq6iDhxt9t32GPCuVbltEWEbJ4OAVdBQEoBf27yZblDJtpjXlMmy8/5AB/TuJH8DowzESRZK26iTmkxcjrfYItPPme8F33y2Xc3SENY/ root@ip-10-10-240-102
+```
+
+
 ## priv esc
