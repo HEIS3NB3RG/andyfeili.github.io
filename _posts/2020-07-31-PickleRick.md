@@ -114,4 +114,10 @@ view page source of /portal.php
 ```
 <!-- Vm1wR1UxTnRWa2RUV0d4VFlrZFNjRlV3V2t0alJsWnlWbXQwVkUxV1duaFZNakExVkcxS1NHVkliRmhoTVhCb1ZsWmFWMVpWTVVWaGVqQT0== -->
 ```
+decode this many times with base64, got the text
+
+```
+rabbit hole
+```
+
 ## priv esc
