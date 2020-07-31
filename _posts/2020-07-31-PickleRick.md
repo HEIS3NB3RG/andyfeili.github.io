@@ -47,4 +47,17 @@ login to http://10.10.161.86/login.php with
 ```
 R1ckRul3s:Wubbalubbadubdub
 ```
+
+run ls command
+```
+Sup3rS3cretPickl3Ingred.txt
+assets
+clue.txt
+denied.php
+index.html
+login.php
+portal.php
+robots.txt
+```
+
 ## priv esc
