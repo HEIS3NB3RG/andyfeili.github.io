@@ -15,6 +15,10 @@ PORT   STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 7.59 seconds
 ```
 
+gobuster found
+```
+http://10.10.222.173/assets/
+```
 
 
 ## access
