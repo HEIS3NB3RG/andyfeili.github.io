@@ -25,4 +25,14 @@ robots.txt
 Wubbalubbadubdub
 ```
 
+inspect source of homepage
+```
+<!--
+
+    Note to self, remember username!
+
+    Username: R1ckRul3s
+
+  -->
+```
 ## priv esc
