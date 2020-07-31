@@ -42,4 +42,9 @@ inspect source of homepage
 
   -->
 ```
+
+login to http://10.10.161.86/login.php with
+```
+R1ckRul3s:Wubbalubbadubdub
+```
 ## priv esc
