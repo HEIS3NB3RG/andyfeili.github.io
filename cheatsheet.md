@@ -82,7 +82,7 @@ sudo umount -f -l thm
 
 ## gobuster
 
-gobuster dir -u http://ip:port -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt
+gobuster dir -u http://ip:port -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt -t 30
 
 ## crack passwords
 
