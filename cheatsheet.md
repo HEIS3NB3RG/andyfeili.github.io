@@ -187,3 +187,7 @@ on own machine
 ```
 scp james@10.10.165.113:Alien_autospy.jpg /home/kali/Downloads
 ```
+
+## decode/encode
+
+https://gchq.github.io/CyberChef/
