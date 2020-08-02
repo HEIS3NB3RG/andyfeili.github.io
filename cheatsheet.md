@@ -112,6 +112,8 @@ pg -d note1.txt.gpg (decrypt gpg)
 
 steghide extract -sf ./TryHackMe.jpg (stenography)
 
+exiftool ./tryHackMe.jpg
+
 /home/kali/.local/bin/stegcracker cute-alien.jpg /usr/share/wordlists/rockyou.txt
 
 crack zip password
