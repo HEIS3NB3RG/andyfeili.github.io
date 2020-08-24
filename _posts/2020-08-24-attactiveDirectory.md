@@ -1,3 +1,5 @@
+https://tryhackme.com/room/attacktivedirectory
+
 10.10.4.164
 
 [Task 3] Enumerate the DC 
