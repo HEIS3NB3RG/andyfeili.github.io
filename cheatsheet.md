@@ -215,6 +215,11 @@ Which user account can you query a ticket from with no password?
 GetNPUsers.py spookysec.local/svc-admin -no-pass -dc-ip 10.10.4.164
 ```
 
+enum shares - no password
+```
+smbclient -L 10.10.4.164 
+```
+
 enum shares - requires password
 ```
 smbclient -L 10.10.4.164 --user svc-admin
