@@ -245,3 +245,38 @@ pass the hash
 ```
 evil-winrm -i 10.10.4.164 -u Administrator -H e4876a80a723612986d7609aa5ebc12b
 ```
+## Assembly
+
+start debug mode 
+
+```
+r2 -d <program>
+```
+
+search for main function 
+
+```
+s  main
+```
+
+view disassembly
+
+```
+pd
+```
+
+break point 
+
+```
+db <address value>
+```
+
+run until next break point
+```
+dc
+```
+
+print register values
+```
+dr <register>
+```
