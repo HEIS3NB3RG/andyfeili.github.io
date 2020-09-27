@@ -133,6 +133,12 @@ binwalk cutie.png
 
 binwalk cutie.png -e (extract hidden files)
 
+gpg decrypt > then enter password
+
+```
+gpg helmet_key.txt.gpg
+```
+
 openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out file.txt (asymmetric decryption using private key) 
 
 ## cmd to start reverse shell 
