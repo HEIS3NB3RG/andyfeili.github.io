@@ -290,3 +290,17 @@ print register values
 ```
 dr <register>
 ```
+
+<details>
+<summary>Click to expand</summary>
+
+whatever
+
+<details>
+<summary>Click to expand</summary>
+
+whatever
+
+</details>
+
+</details>
