@@ -292,14 +292,19 @@ dr <register>
 ```
 
 <details>
-<summary>Click to expand</summary>
+<summary># nMAP</summary>
+
+<details>
+<summary>## win</summary>
 
 whatever
 
 <details>
-<summary>Click to expand</summary>
+<summary>## lin</summary>
 
 whatever
+
+</details>
 
 </details>
 
