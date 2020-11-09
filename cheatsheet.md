@@ -308,3 +308,14 @@ print register values
 ```
 dr <register>
 ```
+
+## CheckList
+
+
+<details>
+<summary>Login Page</summary>
+crack password using hydra
+use SQL injection to bypass login
+use cookie to login
+check source of login page
+</details>
