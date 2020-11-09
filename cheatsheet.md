@@ -313,9 +313,9 @@ dr <register>
 
 
 <details>
-<summary>Login Page</summary><br>
-crack password using hydra<br>
-use SQL injection to bypass login<br>
-use cookie to login<br>
-check source of login page<br>
+<summary>Login Page</summary>
+  crack password using hydra<br>
+  use SQL injection to bypass login<br>
+  use cookie to login<br>
+  check source of login page<br>
 </details>
