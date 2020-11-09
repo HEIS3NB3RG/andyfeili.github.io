@@ -291,7 +291,7 @@ print register values
 dr <register>
 ```
 
-# <details>
+ <# details>
 
 test
-# </details>
+ <# /details>
