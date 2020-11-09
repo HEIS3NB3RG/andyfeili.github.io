@@ -20,13 +20,6 @@ wpscan --url blog.thm --enumerate u
 ```
 sudo masscan -e tun0 -p1-65535,U:1-65535 10.10.1.109 --rate=1000 (quick open port scan)
 
-## Metasploit
-
-run nmap on target and store results into metasploit database
-```
-db_nmap -sV BOX-IP
-```
-
 ## FTP
 
 use FTP to copy files onto box
