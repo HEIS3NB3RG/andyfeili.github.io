@@ -292,20 +292,6 @@ dr <register>
 ```
 
 <details>
-# <summary># nMAP</summary>
 
-<details>
-## <summary>## win</summary>
-
-whatever
-
-<details>
-## <summary>## lin</summary>
-
-whatever
-
-</details>
-
-</details>
-
+test
 </details>
