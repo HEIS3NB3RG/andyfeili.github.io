@@ -214,7 +214,7 @@ ssh -i key kay@10.10.122.69
 
 host on own computer
 ```
-sudo python -m SimpleHTTPServer
+sudo python -m SimpleHTTPServer 8000
 ```
 
 get on box
