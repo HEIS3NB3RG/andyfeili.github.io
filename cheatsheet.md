@@ -209,8 +209,6 @@ ssh -i key kay@10.10.122.69
 
 ### crack /etc/shadow
 
-john can also be used to crack hashes in the /etc/shadow file
-
 copy hashes from /etc/shadow to text file, one hash per line
 
 crack all hashes in file
