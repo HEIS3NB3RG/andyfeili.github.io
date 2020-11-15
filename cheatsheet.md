@@ -149,11 +149,6 @@ return meta data
 exiftool ./tryHackMe.jpg
 ```
 
-crack zip password
-```
-/usr/sbin/zip2john 8702.zip > output
-sudo john output
-```
 check for hidden files, then extract
 ```
 binwalk cutie.png
@@ -216,25 +211,20 @@ ssh -i key kay@10.10.122.69
 
 john can also be used to crack hashes in the /etc/shadow file
 
-save hashes to file
-<details>
-```
-james:$6$7GS5e.yv$HqIH5MthpGWpczr3MnwDHlED8gbVSHt7ma8yxzBM8LuBReDV5e1Pu/VuRskugt1Ckul/SKGX.5PyMpzAYo3Cg/:18464:0:99999:7:::
-paradox:$6$oRXQu43X$WaAj3Z/4sEPV1mJdHsyJkIZm1rjjnNxrY5c8GElJIjG7u36xSgMGwKA2woDIFudtyqY37YCyukiHJPhi4IU7H0:18464:0:99999:7:::
-szymex:$6$B.EnuXiO$f/u00HosZIO3UQCEJplazoQtH8WJjSX/ooBjwmYfEOTcqCAlMjeFIgYWqR5Aj2vsfRyf6x1wXxKitcPUjcXlX/:18464:0:99999:7:::
-bee:$6$.SqHrp6z$B4rWPi0Hkj0gbQMFujz1KHVs9VrSFu7AU9CxWrZV7GzH05tYPL1xRzUJlFHbyp0K9TAeY1M6niFseB9VLBWSo0:18464:0:99999:7:::
-muirland:$6$SWybS8o2$9diveQinxy8PJQnGQQWbTNKeb2AiSp.i8KznuAjYbqI3q04Rf5hjHPer3weiC.2MrOj2o1Sw/fd2cu0kC6dUP.:18464:0:99999:7:::
-```
-</details>
+copy hashes from /etc/shadow to text file, one hash per line
 
 crack all hashes in file
 ```
 /usr/sbin/john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
-###
+### crack zip password
+```
+/usr/sbin/zip2john 8702.zip > output
+sudo john output
+```
 
-remove john cache
+### remove john cache
 ```
 rm /home/kali/.john/john.pot
 ```
