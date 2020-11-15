@@ -126,6 +126,10 @@ crack password for zip
 fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v ./christmaslists.zip (zip password)
 ```
 crack hash, (-m) is the hash id, google hash id
+
+eg. sha512($pass.$salt)
+m = 1710
+hash format = "hashedPass:salt"
 ```
 hashcat -m 1800 hash /usr/share/wordlists/rockyou.txt --force 
 ```
