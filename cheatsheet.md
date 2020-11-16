@@ -327,9 +327,16 @@ dr <register>
 
 
 <details>
-<summary>Login Page</summary>
+<summary>Login Web Page</summary>
   crack password using hydra<br>
   use SQL injection to bypass login<br>
   use cookie to login<br>
   check source of login page<br>
+</details>
+
+<details>
+<summary>FTP</summary>
+  login using anonymous account<br>
+  ls -la<br>
+  put<br>
 </details>
