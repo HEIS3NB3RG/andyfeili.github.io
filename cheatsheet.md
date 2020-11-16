@@ -256,13 +256,13 @@ scp james@10.10.165.113:Alien_autospy.jpg /home/kali/Downloads
 
 if we don't have credentials use netcat
 
-listen for the file on our machine
+from box start nc to listen for request
 ```
 nc -lvp 4444 > suspicious.pcapng
 ```
-send file from box
+on our machine connect to box to download file
 ```
-nc 10.49.144 4444 -w 3 < suspicious.pcapng
+nc 10.10.50.102 4444 -w 3 < suspicious.pcapng
 ```
 
 ## Active Directory
