@@ -351,3 +351,10 @@ dr <register>
   ls -la<br>
   put<br>
 </details>
+
+<details>
+<summary>Priv Esc</summary>
+  sudo -l<br>
+  linpeas.sh<br>
+  pspy64<br>
+</details>
