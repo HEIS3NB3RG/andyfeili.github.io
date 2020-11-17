@@ -349,12 +349,12 @@ dr <register>
 <summary>FTP</summary>
   login using anonymous account<br>
   ls -la<br>
-  put<br>
+  use the "put" command to upload reverse shell<br>
 </details>
 
 <details>
 <summary>Priv Esc</summary>
   sudo -l<br>
   linpeas.sh<br>
-  pspy64<br>
+  pspy64 - check cron jobs that linpeas might miss<br>
 </details>
