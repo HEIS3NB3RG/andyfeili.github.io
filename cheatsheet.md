@@ -15,6 +15,12 @@ webscan
 ```
 nikto -host 10.10.200.161
 ```
+
+owasp-zap scanner
+```
+zaproxy
+```
+
 linux scan
 ```
 enum4linux -a 10.10.26.102 | tee enum4linuxOutput.log
