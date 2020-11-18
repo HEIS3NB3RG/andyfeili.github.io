@@ -1,5 +1,11 @@
 # Cheat Sheet
 
+color word red using grep
+
+```
+man nikto | grep --color -P "host|"
+```
+
 ## Enumeration
 
 ```
