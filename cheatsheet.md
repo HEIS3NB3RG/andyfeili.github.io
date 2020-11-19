@@ -53,6 +53,10 @@ select the database called "data"
 ```
 use data;
 ```
+show tables in database
+```
+show tables;
+```
 
 return all from the table called "USERS"
 ```
