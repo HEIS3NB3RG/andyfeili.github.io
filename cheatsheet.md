@@ -41,9 +41,9 @@ scp linpeas.sh jan@10.10.122.69:/dev/shm
 
 ## mysql 
 
-connect to mysql using password
+connect to mysql using password (root:hello)
 ```
-mysql -h 10.10.28.115 -u(root) -p(ff912ABD*)
+mysql -h 10.10.28.115 -uroot -phello
 ```
 after connecting, display all databases
 ```
