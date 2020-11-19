@@ -346,6 +346,13 @@ print register values
 dr <register>
 ```
 
+## XXS
+
+test for XXS
+```
+<script>alert('xss')</script>
+```
+
 ## CheckList
 
 
