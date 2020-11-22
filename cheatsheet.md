@@ -16,6 +16,11 @@ webscan
 nikto -host 10.10.200.161
 ```
 
+nikto with creds
+```
+nikto -h http://10.10.183.26:1234/manager/html -id bob:bubbles
+```
+
 owasp-zap scanner
 ```
 zaproxy
