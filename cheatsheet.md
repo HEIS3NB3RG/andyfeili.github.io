@@ -195,6 +195,12 @@ asymmetric decryption using private key
 openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out file.txt
 ```
 
+## reverse ssh tunnel
+
+```
+ssh -L 10000:localhost:10000 agent47@10.10.209.11
+```
+
 ## reverse shell 
 
 ```
