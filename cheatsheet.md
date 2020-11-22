@@ -197,9 +197,12 @@ openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out file.txt
 
 ## reverse ssh tunnel
 
+start tunnel
 ```
 ssh -L 10000:localhost:10000 agent47@10.10.209.11
 ```
+
+go to localhost:10000 to access service
 
 ## reverse shell 
 
