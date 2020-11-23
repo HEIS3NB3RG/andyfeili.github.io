@@ -6,6 +6,11 @@ color word red using grep
 man nikto | grep --color -P "host|"
 ```
 
+rdp
+```
+xfreerdp /u:admin /p:password /v:10.10.52.82
+```
+
 ## Enumeration
 
 ```
