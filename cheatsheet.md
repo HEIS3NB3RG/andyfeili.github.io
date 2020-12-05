@@ -130,6 +130,11 @@ short word list
 gobuster dir -u http://ip:port -w /usr/share/wordlists/dirb/common.txt -x php,html,txt -t 30 
 ```
 
+wfuzz
+```
+wfuzz -c -z file,wordlist http://10.10.106.25/api/site-log.php?date=FUZZ
+```
+
 ## crack passwords
 
 crack web login portal password
