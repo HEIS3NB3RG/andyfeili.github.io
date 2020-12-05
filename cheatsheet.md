@@ -40,6 +40,13 @@ wordpress scan
 ```
 wpscan --url blog.thm --enumerate u
 ```
+
+joomla scan
+
+```
+perl /home/kali/Documents/joomscan/joomscan.pl -u http://10.10.52.48
+```
+
 sudo masscan -e tun0 -p1-65535,U:1-65535 10.10.1.109 --rate=1000 (quick open port scan)
 
 ## FTP
