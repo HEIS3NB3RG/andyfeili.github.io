@@ -182,6 +182,11 @@ hash format = "hashedPass:salt"
 hashcat -m 1800 hash /usr/share/wordlists/rockyou.txt --force 
 ```
 
+crack hash with john
+```
+/usr/sbin/john hash --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
 ## Encryption
 
 decrypt gpg
