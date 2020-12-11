@@ -11,6 +11,12 @@ rdp
 xfreerdp /u:admin /p:password /v:10.10.52.82
 ```
 
+ssh tunnel
+
+```
+ssh -L 9000:172.17.0.2:8080 aubreanna@10.10.188.199
+```
+
 ## Enumeration
 
 ```
