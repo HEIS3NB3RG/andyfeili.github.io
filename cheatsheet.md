@@ -16,6 +16,10 @@ ssh tunnel
 ```
 ssh -L 9000:172.17.0.2:8080 aubreanna@10.10.188.199
 ```
+kill process on port
+```
+fuser -k 7777/tcp
+```
 
 ## Enumeration
 
