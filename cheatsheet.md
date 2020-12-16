@@ -388,6 +388,12 @@ netcat 10.4.9.144 8765 -w 4 < suspicious.pcapng
 
 ## Active Directory
 
+copy exe files here to bypass applocker
+
+```
+C:\Windows\System32\spool\drivers\color
+```
+
 enumerate users - requires wordlist of usernames
 
 ```
