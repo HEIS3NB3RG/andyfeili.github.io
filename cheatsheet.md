@@ -511,6 +511,11 @@ run until next break point
 dc
 ```
 
+run next instruction
+```
+ds
+```
+
 print register values
 ```
 dr <register>
