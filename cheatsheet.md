@@ -491,6 +491,11 @@ examine main function
 pdf @main
 ```
 
+examine variable: ; var int64_t var_ch @ rbp-0xc
+```
+px@rbp-0xc
+```
+
 search for main function 
 ```
 s  main
