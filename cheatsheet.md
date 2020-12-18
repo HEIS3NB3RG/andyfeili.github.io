@@ -476,6 +476,21 @@ start debug mode
 r2 -d <program>
 ```
 
+analyze the program
+```
+aa
+```
+
+find a list of the functions
+```
+afl
+```
+
+examine main function
+```
+pdf @main
+```
+
 search for main function 
 ```
 s  main
